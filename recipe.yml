@@ -12,7 +12,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 # If you use `latest`, you will be automatically updated
 # to the next major version assuming the image you're using as your base container
 # builds with the tag (all uBlue images do this).
-fedora-version: 37
+fedora-version: 38
 
 # This description will be visible in the container metadata
 description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
@@ -26,8 +26,14 @@ scripts:
 # this is the proper way to add copr repos to your image
 extrarepos:
   # example:
-  # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo
-
+  - https://copr.fedorainfracloud.org/coprs/patrickl/wine-tkg-testing/repo/fedora-38/patrickl-wine-tkg-testing-fedora-38.repo
+  - https://copr.fedorainfracloud.org/coprs/patrickl/wine-mono-testing/repo/fedora-38/patrickl-wine-mono-testing-fedora-38.repo
+  - https://copr.fedorainfracloud.org/coprs/patrickl/vkd3d-testing/repo/fedora-38/patrickl-vk3d-testing-fedora-38.repo
+  - https://copr.fedorainfracloud.org/coprs/patrickl/mingw-wine-gecko-testing/repo/fedora-38/patrickl-mingw-wine-gecko-testing-fedora-38.repo
+  - https://copr.fedorainfracloud.org/coprs/patrickl/wine-dxvk-testing/repo/fedora-38/patrickl-wine-dxvk-testing-fedora-38.repo
+  - https://copr.fedorainfracloud.org/coprs/patrickl/winetricks-testing/repo/fedora-38/patrickl-winetricks-testing-fedora-38.repo
+  - https://copr.fedorainfracloud.org/coprs/patrickl/yabridge-stable/repo/fedora-38/patrickl-yabridge-stable-fedora-38.repo
+  
 # These rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
 rpms:
